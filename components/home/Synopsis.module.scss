@@ -1,0 +1,24 @@
+.Container {
+  max-width: 82.8rem;
+  margin: 0 auto;
+  padding: 3rem;
+
+  h3 {
+    font-size: 3.2rem;
+    font-weight: 700;
+    text-align: center;
+    margin-top: 7rem;
+    margin-bottom: 3rem;
+  }
+
+  .Button {
+    margin-top: 3rem;
+    margin-bottom: 4rem;
+    text-align: center;
+  }
+
+  p {
+    line-height: 1.5;
+    text-align: justify;
+  }
+}

@@ -1,0 +1,127 @@
+.Container {
+  // max-width: 90rem;
+  margin: 5rem auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  overflow-x: hidden;
+  position: relative;
+
+  .Img {
+    position: absolute;
+    top: -15rem;
+  }
+
+  // .YoutubeVideo {
+  //   max-width: 70.2rem;
+  //   width: 100%;
+  //   height: 39.5rem;
+  //   background-color: lightgray;
+  //   border: darkgray;
+  // }
+
+  .Inner {
+    @media screen and (max-width: 699px) {
+      width: 100%;
+      overflow-x: auto;
+    }
+
+    @media screen and (max-width: 650px) {
+      display: none;
+    }
+  }
+
+  .Expect {
+    width: 100%;
+
+    h3 {
+      margin: 5rem 1rem;
+      text-align: center;
+      // font-size: 3.2rem;
+    }
+
+    .Images {
+      display: flex;
+      gap: 2%;
+      flex-wrap: wrap;
+      align-items: center;
+      justify-content: center;
+
+      @media screen and (max-width: 650px) {
+        flex-wrap: nowrap;
+        overflow: auto !important;
+        align-items: flex-start;
+        justify-content: center;
+        width: max-content;
+      }
+
+      @media screen and (max-width: 699px) {
+        gap: 0.5rem;
+      }
+
+      div {
+        position: relative;
+        width: 42.8rem;
+        max-width: 45%;
+        height: 30rem;
+        border-radius: 1rem;
+        margin-bottom: 2%;
+        overflow: hidden;
+        box-shadow: 0 0 5px rgba(black, 0.5);
+
+        @media screen and (max-width: 650px) {
+          width: 34.3rem;
+          height: 24rem;
+          margin-bottom: 0 !important;
+        }
+
+        // @media screen and (max-width: 699px) {
+        //   height: 27rem;
+        //   border-radius: 0;
+        // }
+      }
+
+      img {
+        position: absolute;
+        border-radius: 1rem;
+        width: 100%;
+        border-radius: 0;
+      }
+
+      article {
+        z-index: 3;
+        color: #ddd;
+        position: absolute;
+        bottom: 0rem;
+        left: 0;
+        background: linear-gradient(
+          180deg,
+          transparent,
+          rgba(black, 0.7),
+          black
+        );
+        width: 100%;
+        line-height: 1;
+        padding: 1rem 2rem;
+        text-align: justify;
+        padding: 3.5rem;
+      }
+
+      h4 {
+        font-size: 2.4rem;
+        font-weight: bold;
+        margin-bottom: 1rem;
+      }
+
+      p {
+        font-size: 1.2rem;
+      }
+    }
+  }
+
+  .Slider {
+    max-width: 50rem;
+    margin: 0 auto;
+  }
+}

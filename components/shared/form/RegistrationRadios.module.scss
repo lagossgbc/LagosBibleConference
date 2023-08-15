@@ -1,0 +1,62 @@
+@import "../../../styles/variables.scss";
+
+.Container {
+  padding-bottom: 5rem;
+
+  p {
+    margin-bottom: 1rem;
+  }
+
+  label {
+    margin-right: 1rem;
+    position: relative;
+    padding-left: 2.5rem;
+
+    &::before {
+      content: "";
+      width: 2rem;
+      height: 2rem;
+      border: 2px solid $black;
+      position: absolute;
+      border-radius: 50%;
+      top: 1px;
+      left: 0;
+    }
+  }
+
+  input[type="radio"] {
+    display: none;
+
+    &:checked + label::after {
+      content: "";
+      width: 1.2rem;
+      height: 1.2rem;
+      background-color: $black;
+      position: absolute;
+      border-radius: 50%;
+      top: 4.7px;
+      left: 4px;
+    }
+  }
+
+  .Radios {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1rem;
+
+    @media screen and (max-width: 700px) {
+      flex-direction: column;
+    }
+  }
+
+  .SpecifyInput {
+    flex: 1;
+    padding-bottom: 0;
+  }
+
+  .Last {
+    display: inline-block;
+    margin-top: 1.2rem;
+    cursor: pointer;
+  }
+}

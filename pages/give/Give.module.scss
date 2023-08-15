@@ -1,0 +1,57 @@
+@import "../../styles/variables.scss";
+
+.Inner {
+  padding: 1rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding-top: 2rem;
+  padding-bottom: 5rem;
+  background: linear-gradient(
+    135deg,
+    rgba($pry-1, 35%),
+    rgba($pry-2, 10%),
+    rgba(#0066ff, 10%)
+  );
+  font-size: 2rem;
+
+  h3 {
+    text-transform: uppercase;
+    font-size: 3.2rem;
+    font-weight: 700;
+    padding-bottom: 2rem;
+    margin-bottom: 4rem;
+    border-bottom: 1px solid black;
+    width: max-content;
+
+    @media screen and (max-width: 700px) {
+      font-size: 2.5rem;
+      margin-top: 3rem;
+      border-bottom: none;
+      width: auto;
+      text-align: center;
+    }
+  }
+
+  div {
+    margin: 0 auto;
+    max-width: 60rem;
+    text-align: center;
+
+    p {
+      &:first-of-type {
+        margin-bottom: 3rem;
+      }
+    }
+  }
+}
+
+.Img {
+  position: relative;
+  width: 100%;
+  height: 30rem;
+
+  img {
+    background-position: 50% 25%;
+  }
+}

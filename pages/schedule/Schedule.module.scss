@@ -1,0 +1,191 @@
+@import "../../styles/variables.scss";
+
+.Container {
+  background-image: url("/images/schedule-bg.webp");
+  width: 100vw;
+  height: max-content;
+  background-size: cover;
+  background-position: center;
+  //   padding-right: 2rem;
+
+  @media screen and (max-width: 700px) {
+    padding-right: 0;
+  }
+
+  .Top {
+    position: relative;
+    max-width: 100%;
+    height: 30rem;
+
+    @media screen and (max-width: 600px) {
+      height: 40rem;
+    }
+  }
+
+  .MobileImage {
+    margin-top: -2rem;
+    img {
+      object-fit: contain;
+    }
+    @media screen and (min-width: 601px) {
+      display: none;
+    }
+  }
+
+  .DesktopImage {
+    @media screen and (max-width: 600px) {
+      display: none;
+    }
+  }
+
+  .Sessions {
+    background-color: white;
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.7);
+    max-width: 70%;
+    margin: 0 auto;
+    top: -5rem;
+    position: relative;
+    z-index: 5;
+    padding: 2rem 6rem;
+    text-align: justify;
+
+    @media screen and (max-width: 900px) {
+      max-width: 85%;
+    }
+    @media screen and (max-width: 750px) {
+      max-width: 95%;
+      padding: 2rem 3rem;
+    }
+    @media screen and (max-width: 750px) {
+      max-width: 100%;
+      padding: 2rem;
+    }
+
+    h3 {
+      text-align: center;
+      font-size: 2.4rem;
+      letter-spacing: 3px;
+      font-weight: 600;
+      margin-bottom: 3rem;
+      margin-top: 2rem;
+    }
+
+    h4 {
+      font-size: 2.4rem;
+      font-weight: 600;
+      text-align: center;
+      margin: 5rem 0;
+
+      &::after,
+      &::before {
+        content: "";
+        width: 100%;
+        height: 1px;
+        background-color: $pry-2;
+        display: block;
+      }
+    }
+  }
+
+  @media screen and (max-width: 650px) {
+    .Num1 {
+      display: none;
+    }
+  }
+
+  @media screen and (min-width: 651px) {
+    .Num2 {
+      display: none;
+    }
+  }
+
+  .Schedule {
+    margin-bottom: 4rem;
+
+    ul {
+      @media screen and (max-width: 650px) {
+        display: flex;
+        align-items: center;
+        flex-direction: column;
+        text-align: center;
+      }
+    }
+  }
+
+  .BG {
+    width: 100%;
+    height: 100%;
+  }
+
+  li {
+    display: flex;
+    gap: 1rem;
+    line-height: 1.3;
+    margin-bottom: 2rem;
+    font-size: 1.6rem;
+  }
+
+  .Topic {
+    @media screen and (min-width: 651px) {
+      font-weight: bold;
+      text-align: center;
+    }
+  }
+
+  .Desc {
+    @media screen and (max-width: 650px) {
+      display: none;
+      visibility: hidden;
+      pointer-events: none;
+    }
+  }
+
+  .Seminars {
+    display: flex;
+    gap: 2rem;
+    margin-bottom: 10rem;
+
+    @media screen and (max-width: 650px) {
+      ol,
+      ul {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+
+        li {
+          text-align: center;
+        }
+      }
+
+      h5 {
+        text-align: center;
+      }
+    }
+
+    @media screen and (max-width: 650px) {
+      flex-direction: column;
+      margin: auto;
+      margin-bottom: 5rem;
+    }
+
+    h5 {
+      font-size: 1.6rem;
+      margin-bottom: 1rem;
+    }
+
+    li {
+      text-align: left;
+      line-height: 1;
+      margin-bottom: 1rem;
+      font-size: 1.4rem;
+    }
+  }
+
+  .Btn {
+    text-align: center;
+    position: absolute;
+    bottom: -2rem;
+    left: 50%;
+    transform: translateX(-50%);
+  }
+}
