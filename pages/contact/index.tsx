@@ -1,46 +1,41 @@
 import Transition from "../../components/shared/ui/Transition";
-import { poppins, quicksand } from "../../fonts";
 import { MdCall, MdEmail, MdLocationOn } from "react-icons/md";
 
-import classes from "./Contact.module.scss";
 import Input from "../../components/shared/form/Input";
 import Button from "../../components/form/Button";
+
+import classes from "./Contact.module.scss";
 
 const ContactPage = () => {
   return (
     <Transition className={classes.Container}>
       <div className={classes.Left}>
         <div className={classes.Inner}>
-          <h3 className={poppins.className}>For Enquires</h3>
-          <h4 className={poppins.className}>Contact Us at:</h4>
+          <h3>For Enquires</h3>
+          <h4>Contact Us at:</h4>
           <div>
             <MdLocationOn style={{ fontSize: "6rem", marginTop: "-1.5rem" }} />
-            <p className={quicksand.className}>
+            <p>
               Plot 451A Oluwadamilola Fasade Street, Omole Phase 1, Ojodu Berger
               Road Lagos
             </p>
           </div>
           <div>
             <MdCall />
-            <p className={quicksand.className}>
+            <p>
               Call: <a href="tel:+2348067526446">+2348067526446</a>
             </p>
           </div>
           <div>
             <MdEmail />
-            <p className={quicksand.className}>
+            <p>
               Email: <a href="mailto:info@sgbc.ng">info@sgbc.ng</a>
             </p>
           </div>
           <div>
-            <h4
-              className={poppins.className}
-              style={{ marginTop: "2rem", marginBottom: "2rem" }}
-            >
-              Hours:
-            </h4>
+            <h4 style={{ marginTop: "2rem", marginBottom: "2rem" }}>Hours:</h4>
           </div>
-          <div className={classes.Contact + " " + quicksand.className}>
+          <div className={classes.Contact}>
             Mondays to Fridays: 10am - 4pm <br />
             Satudray: Closed <br />
             Sunday: 8am -6pm <br />
@@ -48,8 +43,8 @@ const ContactPage = () => {
         </div>
       </div>
       <div className={classes.Right}>
-        <h3 className={poppins.className}>Contact Us</h3>
         <form>
+          <h3>Contact Us</h3>
           <Input
             label="Name*"
             name="name"

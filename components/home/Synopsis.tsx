@@ -23,7 +23,7 @@ const Synopsis = () => {
         his grace; and with the Holy Spirit pre-eminently in his comfort.
       </p>
       <div className={classes.Button}>
-        <Button text="LEARN MORE" mode="pry" to="/schedule" />
+        <Button text="LEARN MORE" mode="pry" to="/schedule" size="small" />
       </div>
     </section>
   );

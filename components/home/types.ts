@@ -6,4 +6,5 @@ export interface SpeakerType {
   index?: number;
   desc: string[];
   handleSpeaker?: () => void;
+  isPopup?: boolean;
 }

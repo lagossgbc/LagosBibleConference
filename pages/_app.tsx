@@ -1,8 +1,18 @@
 import Head from "next/head";
 import "../styles/globals.scss";
+
+import { Poppins } from "@next/font/google";
+
 import type { AppProps } from "next/app";
 import Layout from "../layout/Layout";
 import RouteLoading from "../components/loaders/RouteLoading";
+
+export const poppins = Poppins({
+  weight: ["300", "600", "700"],
+  display: "swap",
+  subsets: ["latin"],
+  // variable: "--font-poppins",
+});
 
 export default function App({ Component, pageProps }: AppProps) {
   // return <Component {...pageProps} />
@@ -18,7 +28,7 @@ export default function App({ Component, pageProps }: AppProps) {
         <link rel="icon" href="/logo.webp" />
       </Head>
       <RouteLoading />
-      <Layout>
+      <Layout className={poppins.className}>
         <Component {...pageProps} />
       </Layout>
     </>

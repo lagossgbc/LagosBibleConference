@@ -30,13 +30,15 @@ const Speakers = () => {
       )}
       <h3 className=" text-center">SPEAKERS</h3>
       <div className={classes.Speakers}>
-        {speakersData.map((item, index) => (
-          <Speaker
-            {...item}
-            handleSpeaker={() => handleSpeaker(item.name)}
-            index={index}
-          />
-        ))}
+        <div className={classes.Inner}>
+          {speakersData.map((item, index) => (
+            <Speaker
+              {...item}
+              handleSpeaker={() => handleSpeaker(item.name)}
+              index={index}
+            />
+          ))}
+        </div>
       </div>
     </section>
   );

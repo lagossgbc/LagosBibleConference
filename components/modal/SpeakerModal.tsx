@@ -9,7 +9,7 @@ const SpeakerModal: React.FC<{ speaker: SpeakerType }> = ({ speaker }) => {
   return (
     <section className={classes.Container}>
       <div className={classes.Img}>
-        <Speaker {...speaker} />
+        <Speaker {...speaker} isPopup />
       </div>
       <div className={classes.About}>
         <h3 className={eb_garamond.className}>{speaker.name}</h3>

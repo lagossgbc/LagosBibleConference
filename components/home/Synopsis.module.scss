@@ -2,19 +2,25 @@
   max-width: 82.8rem;
   margin: 0 auto;
   padding: 3rem;
+  padding-top: 0;
 
   h3 {
     font-size: 3.2rem;
     font-weight: 700;
     text-align: center;
-    margin-top: 7rem;
+    margin-top: 4rem;
     margin-bottom: 3rem;
+
+    @media screen and (max-width: 600px) {
+      font-size: 2.5rem;
+    }
   }
 
   .Button {
     margin-top: 3rem;
     margin-bottom: 4rem;
     text-align: center;
+    letter-spacing: 2px;
   }
 
   p {

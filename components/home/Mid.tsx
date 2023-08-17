@@ -5,19 +5,20 @@ import MySlider from "../shared/slider/MySlider";
 
 import CountDown from "../shared/ui/CountDown";
 
-import { eb_garamond, poppins, quicksand } from "../../fonts";
+import { eb_garamond, quicksand } from "../../fonts";
 
 import classes from "./Mid.module.scss";
 
 const Mid = () => {
   return (
     <section className={classes.Container}>
-      {/* <div className={classes.YoutubeVideo}></div> */}
+      <div className={classes.YoutubeVideo}>
+        <div className={classes.Inner}></div>
+      </div>
       <CountDown date={new Date("Nov 2 2023")} />
-      <Image src="/images/bg.webp" alt="bg" fill className={classes.Img} />
 
       <div className={classes.Expect}>
-        <h3 className={poppins.className}>WHAT TO EXPECT</h3>
+        <h3>WHAT TO EXPECT</h3>
         <div className={classes.Inner}>
           <div className={classes.Images}>
             {expectData.map((item, index) => (

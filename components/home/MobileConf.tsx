@@ -70,7 +70,6 @@ const MobileConf: React.FC<{
               }}
             >
               <Image src={item.img || ""} alt="What to expect" fill />
-              {/* <img src={img} alt="What to expect" /> */}
               <div
                 style={{
                   display: "flex",
@@ -81,7 +80,7 @@ const MobileConf: React.FC<{
                   className={open_sans.className}
                   style={{
                     position: "absolute",
-                    bottom: "-5rem",
+                    bottom: "-8rem",
                     fontSize: "1.8rem",
                   }}
                 >

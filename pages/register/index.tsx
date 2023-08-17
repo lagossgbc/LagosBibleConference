@@ -1,5 +1,3 @@
-import { poppins } from "../../fonts";
-
 import Input from "../../components/shared/form/Input";
 import RegistrationRadios from "../../components/shared/form/RegistrationRadios";
 import Button from "../../components/shared/form/Button";
@@ -9,7 +7,7 @@ import classes from "./register.module.scss";
 
 const Register = () => {
   return (
-    <Transition className={`${classes.Container} ${poppins.className}`}>
+    <Transition className={classes.Container}>
       <form>
         <h3>Registration</h3>
         <Input

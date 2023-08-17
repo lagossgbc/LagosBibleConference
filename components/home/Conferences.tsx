@@ -33,6 +33,7 @@ const Conferences = () => {
         className={classes.Btn}
         mode="pry"
         to="/archive"
+        size="small"
       />
     </section>
   );

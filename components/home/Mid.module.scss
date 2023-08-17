@@ -1,6 +1,6 @@
 .Container {
   // max-width: 90rem;
-  margin: 5rem auto;
+  // margin: 5rem auto;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -13,13 +13,21 @@
     top: -15rem;
   }
 
-  // .YoutubeVideo {
-  //   max-width: 70.2rem;
-  //   width: 100%;
-  //   height: 39.5rem;
-  //   background-color: lightgray;
-  //   border: darkgray;
-  // }
+  .YoutubeVideo {
+    background-color: white;
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    height: 50rem;
+
+    .Inner {
+      max-width: 70.2rem;
+      width: 100%;
+      height: 39.5rem;
+      background-color: lightgray;
+      border: darkgray;
+    }
+  }
 
   .Inner {
     @media screen and (max-width: 699px) {
@@ -47,6 +55,8 @@
       flex-wrap: wrap;
       align-items: center;
       justify-content: center;
+      max-width: 120rem;
+      margin: auto;
 
       @media screen and (max-width: 650px) {
         flex-wrap: nowrap;

@@ -1,6 +1,5 @@
 import Image from "next/image";
 import Transition from "../../components/shared/ui/Transition";
-import { poppins } from "../../fonts";
 import classes from "./Give.module.scss";
 
 const page = () => {
@@ -16,8 +15,8 @@ const page = () => {
         />
       </div>
 
-      <div className={classes.Inner + " " + poppins.className}>
-        <h3 className={poppins.className}>Support Lagos bible conference</h3>
+      <div className={classes.Inner}>
+        <h3>Support Lagos bible conference</h3>
 
         <div>
           <p>

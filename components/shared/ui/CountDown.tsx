@@ -3,7 +3,7 @@
 import { useEffect, useState } from "react";
 import Timer from "../../utils/timer";
 
-import { poppins, quicksand } from "../../../fonts";
+import { quicksand } from "../../../fonts";
 
 import classes from "./CountDown.module.scss";
 
@@ -27,40 +27,37 @@ const CountDown = ({ date }: { date: Date }) => {
   const addZero = (arg: number) => (arg < 10 ? "0" + arg : arg);
 
   return (
-    <>
-      <h3 className={poppins.className + " " + classes.Lead}>
-        COUNT DOWN TO LBC ‘23
-      </h3>
+    <div className={classes.Outside}>
+      <h3 className={classes.Lead}>COUNT DOWN TO LBC ‘23</h3>
       <article className={classes.Container}>
         <div className={classes.Inner}>
           <div className={classes.Box}>
             <h6 className={quicksand.className}>
               {addZero(RemainingTime.textDay)}
             </h6>
-            <p className={poppins.className}>Days</p>
+            <p>Days</p>
           </div>
           <div className={classes.Box}>
             <h6 className={quicksand.className}>
               {addZero(RemainingTime.textHour)}
             </h6>
-            <p className={poppins.className}>Hours</p>
+            <p>Hours</p>
           </div>
           <div className={classes.Box}>
             <h6 className={quicksand.className}>
               {addZero(RemainingTime.textMinute)}
             </h6>
-            <p className={poppins.className}>Minutes</p>
+            <p>Minutes</p>
           </div>
           <div className={classes.Box}>
             <h6 className={quicksand.className}>
               {addZero(RemainingTime.textSecond)}
-              {/* {addZero(RemainingTime.textSecond - 1)} */}
             </h6>
-            <p className={poppins.className}>Seconds</p>
+            <p>Seconds</p>
           </div>
         </div>
       </article>
-    </>
+    </div>
   );
 };
 

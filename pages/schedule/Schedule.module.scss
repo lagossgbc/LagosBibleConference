@@ -6,7 +6,6 @@
   height: max-content;
   background-size: cover;
   background-position: center;
-  //   padding-right: 2rem;
 
   @media screen and (max-width: 700px) {
     padding-right: 0;
@@ -15,27 +14,51 @@
   .Top {
     position: relative;
     max-width: 100%;
-    height: 30rem;
+    height: 27rem;
+    background-color: #f0ede6;
+    display: flex;
+    justify-content: center;
+    padding-top: 3rem;
+    gap: 4rem;
 
     @media screen and (max-width: 600px) {
-      height: 40rem;
+      height: 37rem;
+      flex-direction: column;
+      align-items: center;
+      gap: 0;
+      margin-bottom: 5rem;
+    }
+
+    h4 {
+      font-size: 1.6rem;
+      width: max-content;
+      margin-top: -2.5rem;
     }
   }
 
-  .MobileImage {
-    margin-top: -2rem;
+  .Hands,
+  .Text {
+    position: relative;
+    height: 15rem;
+
     img {
       object-fit: contain;
     }
-    @media screen and (min-width: 601px) {
-      display: none;
-    }
   }
 
-  .DesktopImage {
-    @media screen and (max-width: 600px) {
-      display: none;
-    }
+  .Hands {
+    width: 18.4rem;
+  }
+
+  .Text {
+    width: 24.8rem;
+    margin-top: -1rem;
+  }
+
+  .TextContainer {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
   }
 
   .Sessions {
@@ -142,8 +165,26 @@
 
   .Seminars {
     display: flex;
+    justify-content: center;
+    text-align: center;
     gap: 2rem;
     margin-bottom: 10rem;
+
+    li {
+      max-width: 30rem;
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      align-items: center;
+      text-align: center !important;
+      padding: 0 0.5rem;
+    }
+
+    @media screen and (max-width: 783px) {
+      flex-direction: column;
+      align-items: center;
+      gap: 4rem;
+    }
 
     @media screen and (max-width: 650px) {
       ol,
@@ -174,7 +215,6 @@
     }
 
     li {
-      text-align: left;
       line-height: 1;
       margin-bottom: 1rem;
       font-size: 1.4rem;

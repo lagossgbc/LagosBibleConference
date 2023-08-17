@@ -7,11 +7,12 @@ import ScrollUpButton from "../components/shared/ScrollUpBtn";
 
 interface IProps {
   children?: React.ReactNode;
+  className?: any;
 }
 
-const Layout: React.FC<IProps> = ({ children }) => {
+const Layout: React.FC<IProps> = ({ children, className }) => {
   return (
-    <div className={classes.Container}>
+    <div className={classes.Container + " " + className}>
       <Navigation />
       <main>{children}</main>
       <ScrollUpButton />

@@ -1,9 +1,5 @@
 const gallery = [
   {
-    id: 1,
-    img: "https://websiteimages.nyc3.cdn.digitaloceanspaces.com/lbc/Fellowship.webp",
-  },
-  {
     id: 2,
     img: "https://websiteimages.nyc3.cdn.digitaloceanspaces.com/lbc/Fellowship_refreshment.webp",
   },
@@ -18,6 +14,10 @@ const gallery = [
   {
     id: 5,
     img: "https://websiteimages.nyc3.cdn.digitaloceanspaces.com/lbc/pastor.webp",
+  },
+  {
+    id: 1,
+    img: "https://websiteimages.nyc3.cdn.digitaloceanspaces.com/lbc/Fellowship.webp",
   },
   {
     id: 6,

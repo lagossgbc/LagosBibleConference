@@ -1,61 +1,112 @@
 .Container {
   width: 100%;
-  min-height: 60vh;
+  min-height: 70vh;
 
   .Banner {
     position: relative;
+    background-image: url("/images/bg-landscape.webp");
+    max-width: 100vw;
+    height: min-content;
+    background-size: cover;
+    min-height: 45vh;
+    padding: 3rem;
 
-    // shows desktop background and Hides  mobile
-    @media screen and (min-width: 771px) {
-      .BG2 {
-        display: none;
-        visibility: hidden;
-        opacity: 0;
-        pointer-events: none;
-      }
-      .BG1 {
-        display: block;
-        visibility: visible;
-        opacity: 1;
-        pointer-events: all;
-      }
-    }
-
-    // Hides desktop background and shows mobile
-    @media screen and (max-width: 770px) {
-      .BG1 {
-        display: none;
-        visibility: hidden;
-        opacity: 0;
-        pointer-events: none;
-      }
-
-      .BG2 {
-        display: block;
-        visibility: visible;
-        opacity: 1;
-        pointer-events: all;
-      }
+    @media screen and (max-width: 600px) {
+      min-height: 60vh;
     }
   }
 
-  .Img {
+  .Inner {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    // padding-top: 2rem;
+  }
+
+  .Text,
+  .Logo {
     position: relative;
-    height: 100vh;
+    height: 20rem;
+
+    @media screen and (max-width: 600px) {
+      // height: 15rem;
+    }
+
+    img {
+      object-fit: contain;
+    }
+  }
+
+  .Logo {
+    width: 20rem;
+
+    @media screen and (max-width: 600px) {
+      width: 25rem;
+    }
+
+    @media screen and (max-width: 400px) {
+      width: 18rem;
+    }
+  }
+  .Text {
+    width: 32rem;
+    margin-top: -7rem;
+
+    @media screen and (max-width: 600px) {
+      width: 22rem;
+      // margin-top: -5rem;
+      // margin-top: -7rem;
+    }
+
+    @media screen and (max-width: 400px) {
+      width: 18rem;
+    }
+  }
+
+  h4 {
+    margin-bottom: 3rem;
+    margin-top: 2rem;
+  }
+
+  .Date {
+    margin-top: -6rem;
+    font-weight: 400;
+
+    @media screen and (max-width: 600px) {
+      margin-top: -4rem;
+    }
+
+    @media screen and (max-width: 400px) {
+      margin-top: -7rem;
+    }
+  }
+
+  .Speakers {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: -3rem;
+    padding: 0 2rem;
 
     @media screen and (max-width: 770px) {
-      height: 90vh;
-      // margin-top: -2rem;
+      display: none;
+      visibility: hidden;
+      pointer-events: none;
+    }
 
-      // img {
-      //   object-fit: contain;
-      // }
+    ul {
+      display: flex;
+      justify-content: center;
+      flex-wrap: wrap;
+      gap: 1rem;
+      line-height: 0.7;
+      font-size: 1.4rem;
     }
   }
 
   .Btn {
     position: absolute;
-    bottom: 2rem;
     display: none;
     pointer-events: none;
     opacity: 0;
@@ -68,6 +119,11 @@
       opacity: 1;
       visibility: visible;
       pointer-events: all;
+      bottom: 5%;
+    }
+
+    @media screen and (max-width: 600px) {
+      bottom: 3rem;
     }
   }
 }

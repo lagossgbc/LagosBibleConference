@@ -1,24 +1,35 @@
 import Image from "next/image";
 import Transition from "../../components/shared/ui/Transition";
 import conferences from "../../data/conferences";
-import { poppins } from "../../fonts";
 
 import classes from "./Archive.module.scss";
 import Link from "next/link";
+import Input from "../../components/shared/form/Input";
+import { poppins } from "../_app";
+import { BiSearch } from "react-icons/bi";
 
 const Archives = () => {
   return (
     <Transition className={classes.Container}>
-      <h3 className={poppins.className}>Conference Archive</h3>
+      <h3>Conference Archive</h3>
 
-      <p>Search for a sermon</p>
+      <div className={classes.Input}>
+        <BiSearch />
+        <Input
+          name="search"
+          onInput={() => {}}
+          placeholder="Search for sermon"
+          autoComplete="on"
+          className={poppins.className}
+        />
+      </div>
       <div className={classes.Archives}>
         {conferences.map((item) => (
           <Link key={item.year} href={"/archive/" + item.year}>
             <div className={classes.Image}>
               <Image src={item.img} alt={item.year} fill sizes="250px" />
             </div>
-            <h6 className={poppins.className}>LBC {item.year}</h6>
+            <h6>LBC {item.year}</h6>
           </Link>
         ))}
       </div>

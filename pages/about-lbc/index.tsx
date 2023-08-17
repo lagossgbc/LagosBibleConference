@@ -1,11 +1,10 @@
+import Link from "next/link";
 import Image from "next/image";
+
+import gallery from "../../data/gallery";
 import Transition from "../../components/shared/ui/Transition";
 
-import { poppins, quicksand } from "../../fonts";
-import gallery from "../../data/gallery";
-
 import classes from "./About.module.scss";
-import Link from "next/link";
 
 const About = () => {
   return (
@@ -15,43 +14,43 @@ const About = () => {
           src="https://websiteimages.nyc3.cdn.digitaloceanspaces.com/lbc/people.webp"
           alt="Banner"
           fill
-          sizes="350px"
+          sizes="500px"
         />
-        <h3 className={poppins.className}>about lagos bible conference</h3>
+        <h3>about lagos bible conference</h3>
       </div>
-      <h3 className={poppins.className}>What is LBC About ?</h3>
+      <h3>What is LBC About ?</h3>
       <div className={classes.Inner}>
-        <article className={quicksand.className}>
-          <p className={quicksand.className}>
+        <article>
+          <p>
             The Lagos Bible Conference (LBC) is the annual flagship conference
             of Sovereign Grace Bible Church (and partners) dedicated to
             promoting the Bible as God's inerrant and infallible Word through a
             faithful exposition of it.
           </p>
-          <p className={quicksand.className}>
+          <p>
             The need for such a gathering in Lagos was apparent, given the
             ignorance and lack of faithfulness in handling God's holy word.
           </p>
-          <p className={quicksand.className}>
+          <p>
             This endeavor was set in motion by Pastor Joe Jacowitz (Christ Bible
             Church, CA, United States), Pastor Tony Okoroh (Sovereign Grace
             Bible Church, Lagos), Pastor Abiodun Longe (Upper Room Baptist
             Church, Lagos) and the pastor of the then Lagos Tabernacle, a church
             planted by the London Metropolitan Tabernacle.
           </p>
-          <p className={quicksand.className}>
+          <p>
             From its inception in 2002, LBC was committed to equipping pastors
             (from a range of denominations… mostly pentecostal and charismatic)
             in Lagos through a faithful exposition of the Scriptures, in a bid
             to establish them properly in the faith in the hope of bringing true
             revival and reformation to their respective local churches.
           </p>
-          <p className={quicksand.className}>
+          <p>
             Over time, the conference's reputation grew, and the interest from
             participants grew exponentially, prompting its transformation into a
             fully inclusive event accessible to all.
           </p>
-          <p className={quicksand.className}>
+          <p>
             The conference carries an evangelistic essence, actively
             disseminating the life-saving knowledge of the gospel of Christ to
             all attendees, because of the falsehood that pervades the land;
@@ -60,7 +59,7 @@ const About = () => {
           </p>
         </article>
         <section>
-          <h3 className={poppins.className}>PICTURES FROM PAST CONFERENCES</h3>
+          <h3>PICTURES FROM PAST CONFERENCES</h3>
 
           <div className={classes.Gallery}>
             {gallery.map((item) => (
@@ -72,7 +71,7 @@ const About = () => {
         </section>
 
         <section className={classes.FirstLove}>
-          <h3 className={poppins.className}>OUR PARTNER</h3>
+          <h3>OUR PARTNER</h3>
           <hr />
           <Link href="https://www.missionsfirstlove.org/" target="__blank">
             <Image

@@ -2,7 +2,7 @@ import { useEffect, useState } from "react";
 
 import navData from "./navData";
 
-import { alfa_slab_one, poppins } from "../../fonts";
+import { alfa_slab_one } from "../../fonts";
 
 import Link from "next/link";
 
@@ -51,7 +51,7 @@ const Navbar = () => {
   return (
     <>
       <nav className={`${classes.Container} `} id="NavBar">
-        <ul className={poppins.className}>
+        <ul>
           {navData.map((item) => (
             <li
               key={item.title}

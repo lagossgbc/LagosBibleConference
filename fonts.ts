@@ -1,18 +1,18 @@
 import {
   Alfa_Slab_One,
-  Poppins,
+  // Poppins,
   Open_Sans,
   Inter,
   EB_Garamond,
   Quicksand,
 } from "@next/font/google";
 
-export const poppins = Poppins({
-  weight: ["300", "600", "700"],
-  display: "swap",
-  subsets: ["latin"],
-  // variable: "--font-poppins",
-});
+// export const poppins = Poppins({
+//   weight: ["300", "600", "700"],
+//   display: "swap",
+//   subsets: ["latin"],
+//   // variable: "--font-poppins",
+// });
 
 export const inter = Inter({
   weight: ["300"],

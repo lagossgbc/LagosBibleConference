@@ -2,6 +2,7 @@ import Image from "next/image";
 import { eb_garamond, quicksand } from "../../fonts";
 import { SpeakerType } from "./types";
 import classes from "./Speaker.module.scss";
+import Button from "../form/Button";
 
 const Speaker: React.FC<SpeakerType> = ({
   handleSpeaker,
@@ -10,6 +11,7 @@ const Speaker: React.FC<SpeakerType> = ({
   index,
   location,
   name,
+  isPopup,
 }) => {
   return (
     <div className={classes.Container} onClick={handleSpeaker}>
@@ -25,6 +27,14 @@ const Speaker: React.FC<SpeakerType> = ({
         <h4 className={eb_garamond.className}>{name}</h4>
         <p className={quicksand.className}>{church}</p>
         <p className={quicksand.className}>{location}</p>
+        {!isPopup && (
+          <Button
+            text="LEARN MORE"
+            mode="sec"
+            size="small"
+            className={classes.Btn}
+          />
+        )}
       </div>
     </div>
   );

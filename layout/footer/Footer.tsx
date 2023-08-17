@@ -1,15 +1,13 @@
-import { BsYoutube, BsInstagram, BsTwitter, BsFacebook } from "react-icons/bs";
+import { alfa_slab_one } from "../../fonts";
 
-import { alfa_slab_one, poppins } from "../../fonts";
-
-import classes from "./Footer.module.scss";
-import Button from "../../components/form/Button";
 import Image from "next/image";
 import Social from "./Social";
 
+import classes from "./Footer.module.scss";
+
 const Footer = () => {
   return (
-    <footer className={`${classes.Container} ${poppins.className}`}>
+    <footer className={classes.Container}>
       <div className={classes.Top}>
         <div className={classes.Img}>
           <Image src="/logo.webp" alt="LBC Logo" width={200} height={160} />{" "}
@@ -19,7 +17,7 @@ const Footer = () => {
           <h4 className={alfa_slab_one.className}>Conference</h4>
         </div>
       </div>
-      <div className={classes.Bottom + " " + poppins.className}>
+      <div className={classes.Bottom}>
         <p className={classes.Base}>
           Sovereign Grace Bible Church © {new Date().getFullYear()}. All Rights
           Reserved.

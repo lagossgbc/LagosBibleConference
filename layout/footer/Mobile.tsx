@@ -11,6 +11,7 @@ const Mobile = () => {
         text="REGISTER"
         to="/register"
         mode="pry"
+        size="small"
         className={open_sans.className + " " + classes.Btn}
       />
       <h4>Contact</h4>

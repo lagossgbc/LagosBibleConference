@@ -14,6 +14,7 @@ interface ButtonProps {
 }
 
 import classes from "./Button.module.scss";
+import { poppins } from "../../pages/_app";
 const Button: React.FC<ButtonProps> = ({
   type = "button",
   target,
@@ -25,26 +26,20 @@ const Button: React.FC<ButtonProps> = ({
   size,
   className,
 }) => {
+  const classesConsts = `${classes.Button} ${mode ? classes[mode] : ""}  ${
+    size ? classes[size] : ""
+  } ${className ? className : ""} ${disabled ? classes.Disabled : ""} ${
+    poppins.className
+  }`;
   if (to) {
     return (
-      <Link
-        href={to}
-        target={target && "__blank"}
-        className={`${classes.Button} ${mode ? classes[mode] : ""}  ${
-          size ? classes[size] : ""
-        } ${className ? className : ""} ${disabled ? classes.Disabled : ""}`}
-      >
+      <Link href={to} target={target && "__blank"} className={classesConsts}>
         {text}
       </Link>
     );
   } else if (type === "submit") {
     return (
-      <button
-        type="submit"
-        className={`${classes.Button} ${mode ? classes[mode] : ""}  ${
-          size ? classes[size] : ""
-        }  ${className ? className : ""}  ${disabled ? classes.Disabled : ""}`}
-      >
+      <button type="submit" className={classesConsts}>
         {text}
       </button>
     );
@@ -53,9 +48,7 @@ const Button: React.FC<ButtonProps> = ({
   return (
     <button
       type="button"
-      className={`${classes.Button} ${mode ? classes[mode] : ""}  ${
-        className ? className : ""
-      }  ${size ? classes[size] : ""}  ${disabled ? classes.Disabled : ""}`}
+      className={classesConsts}
       onClick={onClick && onClick}
     >
       {text}

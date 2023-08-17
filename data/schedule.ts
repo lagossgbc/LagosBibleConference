@@ -40,7 +40,7 @@ const schedule = [
       {
         topic: "How We Commune with God–Prayer",
         desc: "This session will explore the role of prayer in our communion with God. The session will cover topics such as the purpose of prayer, the importance of perseverance in prayer, and the privilege of approaching God in prayer.",
-        speaker: "Austin Huggins",
+        speaker: "Joe Jacowitz",
       },
       {
         topic: "How We Commune with God–The Ordinances",
@@ -70,7 +70,7 @@ const schedule = [
       {
         topic: "Questions and Answers",
         desc: "In this session, all attendees can ask questions bordering on topics discussed from the on-set of the conference.",
-        speaker: "All Pastors Present",
+        speaker: "Q & A Panel",
       },
     ],
   },
