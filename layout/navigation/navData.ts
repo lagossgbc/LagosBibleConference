@@ -26,7 +26,8 @@ const navData = [
   },
   {
     title: "Register",
-    href: "/register",
+    href: "https://lbc2023-register.evenito.site/",
+    target: "__blank",
   },
 ];
 

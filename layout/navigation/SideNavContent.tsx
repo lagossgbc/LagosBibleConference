@@ -19,7 +19,7 @@ const SideNavContent: React.FC<IProps> = ({ handleClose }) => {
             onClick={handleClose}
             style={item.href === "/" ? { order: "-1" } : {}}
           >
-            <Link href={item.href}>
+            <Link href={item.href} target={item.target || ""}>
               {item.href === "/" ? "Home" : item.title}
             </Link>
           </li>

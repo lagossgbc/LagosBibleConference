@@ -58,7 +58,7 @@ const Navbar = () => {
               className={ActiveNav == item.href ? classes.Active : ""}
               onClick={() => setActiveNav(item.href)}
             >
-              {item.href !== "/register" ? (
+              {item.title !== "Register" ? (
                 <Link href={item.href}>
                   {item.img ? (
                     <div className={classes.Logo}>
@@ -75,9 +75,10 @@ const Navbar = () => {
                 <div style={{ marginTop: "-1rem !important" }}>
                   <Button
                     text="REGISTER"
-                    to="/register"
+                    to="https://lbc2023-register.evenito.site/#rsvp"
                     mode="pry"
                     size="small"
+                    target="__blank"
                   />
                 </div>
               )}

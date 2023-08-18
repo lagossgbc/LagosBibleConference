@@ -4,18 +4,27 @@ import { useRouter } from "next/router";
 
 import { findOneConf } from "../../data/conferences";
 
-import classes from "./SingleArchive.module.scss";
 import { eb_garamond } from "../../fonts";
+import VideoList from "../../components/videos/VideoList";
 
-const SingleArchive: React.FC<any> = () => {
+import classes from "./SingleArchive.module.scss";
+
+const SingleArchive: React.FC<any> = (props) => {
   const archiveId = useRouter().query?.archiveId as string;
 
   const currentArchive = findOneConf(archiveId);
+  // const
   // const finalData = { ...props, ...currentArchive };
-  // console.log(props);
-  // const videos = props.items.map((video: any) => {
-  //   // return {video.}
-  // })
+  console.log(props);
+
+  const videos = props.items.map((video: any) => {
+    return {
+      videoId: video.snippet.resourceId.videoId,
+      title: video.snippet.title,
+      thumbnail: video.snippet.thumbnails.medium.url,
+      date: video.snippet.publishedAt,
+    };
+  });
 
   if (!currentArchive) return null;
 
@@ -58,28 +67,26 @@ const SingleArchive: React.FC<any> = () => {
         </article>
       </section>
 
-      <h4 className="text-center" style={{ margin: "10rem auto" }}>
-        Videos will be uploaded soon
-      </h4>
+      <VideoList videos={videos} />
     </div>
   );
 };
 
-// export const getServerSideProps: GetServerSideProps = async (context) => {
-//   const YOUTUBE_API_URL = `https://www.googleapis.com/youtube/v3/playlistItems?part=snippet&playlistId=${context.params?.archiveId}&maxResults=20&key=${process.env.YOUTUBE_API_KEY}`;
+export const getServerSideProps: GetServerSideProps = async (context) => {
+  const YOUTUBE_API_URL = `https://www.googleapis.com/youtube/v3/playlistItems?part=snippet&playlistId=${context.params?.archiveId}&maxResults=20&key=${process.env.YOUTUBE_API_KEY}`;
 
-//   const res = await fetch(YOUTUBE_API_URL);
-//   const data = await res.json();
+  const res = await fetch(YOUTUBE_API_URL);
+  const data = await res.json();
 
-//   if (!data) {
-//     return {
-//       props: { notFound: true },
-//     };
-//   }
+  if (!data) {
+    return {
+      props: { notFound: true },
+    };
+  }
 
-//   return {
-//     props: data,
-//   };
-// };
+  return {
+    props: data,
+  };
+};
 
 export default SingleArchive;

@@ -4,12 +4,10 @@ const conferences = [
     year: "2022",
     img: "https://websiteimages.nyc3.cdn.digitaloceanspaces.com/lbc/2022.webp",
     speakers: [
-      "Joshua Abutu",
-      "Austin Huggins",
+      "Malamulo Chindongo",
       "Tony Okoroh",
-      "Femi Popoola",
-      "Osagie Azeta",
-      "Osinachi Nwoko",
+      "Austin Huggins",
+      "Thomas Smith",
     ],
     synopsis: [
       "The subtitle of John Bunyan’s classic work (The Pilgrims Progress) is: “from this world to that which is to come.” This phrase describes the Christian as belonging to two ‘worlds’ and journeying from one to the other.This is the ethos of the passage in the book of Hebrews regarding the Old Testament saints:",

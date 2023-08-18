@@ -14,7 +14,7 @@ module.exports = () => {
      reactStrictMode: true,
   swcMinify: true,
     images: {
-      domains: ["websiteimages.nyc3.cdn.digitaloceanspaces.com"],
+      domains: ["websiteimages.nyc3.cdn.digitaloceanspaces.com", "i.ytimg.com"],
     },
     eslint: {
       ignoreDuringBuilds: true,

@@ -1,0 +1,74 @@
+.Container {
+  max-width: 60rem;
+  margin: 4rem auto;
+  margin-bottom: 10rem;
+  padding: 0 2rem;
+
+  .Video {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    padding-bottom: 1rem;
+    border-bottom: 1px solid #6e6e6e;
+    margin-bottom: 2rem;
+
+    @media screen and (max-width: 565px) {
+      flex-wrap: wrap;
+      position: relative;
+    }
+  }
+
+  .Group {
+    display: flex;
+    gap: 2rem;
+    align-items: center;
+
+    @media screen and (max-width: 565px) {
+      width: 100%;
+      margin-left: 4rem;
+    }
+  }
+
+  span {
+    width: 3rem;
+    height: 3rem;
+    border-radius: 50%;
+    background-color: lightgray;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    @media screen and (max-width: 565px) {
+      position: absolute;
+      top: 0;
+    }
+  }
+
+  .Name {
+    line-height: 1.2;
+    margin-right: auto;
+
+    & > * {
+      text-transform: capitalize;
+    }
+    small {
+      font-style: italic;
+      color: #6e6e6e;
+    }
+
+    @media screen and (max-width: 565px) {
+      margin-left: 4rem;
+    }
+  }
+
+  .Img {
+    position: relative;
+    width: 6rem;
+    height: 3.5rem;
+
+    img {
+      border-radius: 0.4rem;
+      cursor: pointer;
+    }
+  }
+}

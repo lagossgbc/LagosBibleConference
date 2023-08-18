@@ -1,0 +1,10 @@
+.Container {
+  width: 100%;
+  backdrop-filter: blur(20px);
+
+  iframe {
+    width: 100%;
+    display: block;
+    border-radius: 1rem;
+  }
+}

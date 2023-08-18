@@ -24,6 +24,7 @@
     position: absolute;
     top: -13rem;
     bottom: 0;
+    pointer-events: none;
 
     &.Adjust {
       top: -10rem;

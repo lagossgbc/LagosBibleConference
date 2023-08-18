@@ -16,7 +16,9 @@ const Mid = () => {
       {/* <div className={classes.YoutubeVideo}>
         <div className={classes.Inner}></div>
       </div> */}
-      <CountDown date={new Date("Nov 2 2023")} />
+      {new Date() < new Date("Nov 2 2023") && (
+        <CountDown date={new Date("Nov 2 2023")} />
+      )}
 
       <div className={classes.Expect}>
         <h3>WHAT TO EXPECT</h3>

@@ -1,7 +1,7 @@
-import Input from "../../components/shared/form/Input";
-import RegistrationRadios from "../../components/shared/form/RegistrationRadios";
-import Button from "../../components/shared/form/Button";
-import Transition from "../../components/shared/ui/Transition";
+import Input from "../shared/form/Input";
+import RegistrationRadios from "../shared/form/RegistrationRadios";
+import Button from "../shared/form/Button";
+import Transition from "../shared/ui/Transition";
 
 import classes from "./register.module.scss";
 
