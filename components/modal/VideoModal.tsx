@@ -1,8 +1,6 @@
 import classes from "./VideoModal.module.scss";
 
 const VideoModal: React.FC<{ currentVideo: string }> = ({ currentVideo }) => {
-  console.log(currentVideo);
-
   return (
     <div className={classes.Container}>
       <iframe

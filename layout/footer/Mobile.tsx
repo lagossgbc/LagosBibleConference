@@ -9,9 +9,10 @@ const Mobile = () => {
     <footer className={classes.Container}>
       <Button
         text="REGISTER"
-        to="/register"
+        to="https://lbc2023-register.evenito.site/#rsvp"
         mode="pry"
         size="small"
+        target="__blank"
         className={open_sans.className + " " + classes.Btn}
       />
       <h4>Contact</h4>

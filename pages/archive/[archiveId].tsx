@@ -13,9 +13,6 @@ const SingleArchive: React.FC<any> = (props) => {
   const archiveId = useRouter().query?.archiveId as string;
 
   const currentArchive = findOneConf(archiveId);
-  // const
-  // const finalData = { ...props, ...currentArchive };
-  console.log(props);
 
   const videos = props.items.map((video: any) => {
     return {
