@@ -13,7 +13,6 @@ const Archives = () => {
   return (
     <Transition className={classes.Container}>
       <h3>Conference Archive</h3>
-
       <div className={classes.Input}>
         <BiSearch />
         <Input
