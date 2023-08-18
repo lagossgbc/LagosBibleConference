@@ -36,6 +36,7 @@ const Speakers = () => {
               {...item}
               handleSpeaker={() => handleSpeaker(item.name)}
               index={index}
+              key={index}
             />
           ))}
         </div>

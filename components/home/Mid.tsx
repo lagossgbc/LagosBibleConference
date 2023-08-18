@@ -12,9 +12,10 @@ import classes from "./Mid.module.scss";
 const Mid = () => {
   return (
     <section className={classes.Container}>
-      <div className={classes.YoutubeVideo}>
+      {/* Add padding bottom to speakers */}
+      {/* <div className={classes.YoutubeVideo}>
         <div className={classes.Inner}></div>
-      </div>
+      </div> */}
       <CountDown date={new Date("Nov 2 2023")} />
 
       <div className={classes.Expect}>

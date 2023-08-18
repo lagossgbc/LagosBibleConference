@@ -2,11 +2,12 @@ import Image from "next/image";
 import Transition from "../../components/shared/ui/Transition";
 import conferences from "../../data/conferences";
 
-import classes from "./Archive.module.scss";
 import Link from "next/link";
 import Input from "../../components/shared/form/Input";
 import { poppins } from "../_app";
 import { BiSearch } from "react-icons/bi";
+
+import classes from "./Archive.module.scss";
 
 const Archives = () => {
   return (
@@ -25,7 +26,7 @@ const Archives = () => {
       </div>
       <div className={classes.Archives}>
         {conferences.map((item) => (
-          <Link key={item.year} href={"/archive/" + item.year}>
+          <Link key={item.year} href={"/archive/" + item.playlistId}>
             <div className={classes.Image}>
               <Image src={item.img} alt={item.year} fill sizes="250px" />
             </div>

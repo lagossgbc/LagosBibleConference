@@ -1,11 +1,85 @@
-import React from "react";
+import Image from "next/image";
+import { GetServerSideProps } from "next";
+import { useRouter } from "next/router";
 
-const SingleArchive = () => {
+import { findOneConf } from "../../data/conferences";
+
+import classes from "./SingleArchive.module.scss";
+import { eb_garamond } from "../../fonts";
+
+const SingleArchive: React.FC<any> = () => {
+  const archiveId = useRouter().query?.archiveId as string;
+
+  const currentArchive = findOneConf(archiveId);
+  // const finalData = { ...props, ...currentArchive };
+  // console.log(props);
+  // const videos = props.items.map((video: any) => {
+  //   // return {video.}
+  // })
+
+  if (!currentArchive) return null;
+
   return (
-    <div>
-      <h3 className="text-center">Page Under Construction.</h3>
+    <div className={classes.Container}>
+      <h3>LAGOS BIBLE CONFERENCE {currentArchive?.year}</h3>
+
+      <section>
+        <div className={classes.Left}>
+          <div className={classes.Img}>
+            <Image
+              src={currentArchive.img}
+              alt={"LBC-" + currentArchive.year}
+              fill
+            />
+          </div>
+          <ul>
+            {currentArchive.speakers.map((s, i) => (
+              <li key={i}>{s + " "} </li>
+            ))}
+          </ul>
+        </div>
+        <article>
+          <h4 className={eb_garamond.className}>Synopsis</h4>
+          <div>
+            {currentArchive.synopsis.map((item, index) => (
+              <p key={index}>{item}</p>
+            ))}
+            <ul className={classes.Speakers}>
+              <b>Speakers: &nbsp;</b>
+              {currentArchive.speakers.map((speaker, index) => (
+                <li key={index}>
+                  {index !== currentArchive.speakers.length - 1
+                    ? speaker + " |"
+                    : speaker}{" "}
+                </li>
+              ))}
+            </ul>
+          </div>
+        </article>
+      </section>
+
+      <h4 className="text-center" style={{ margin: "10rem auto" }}>
+        Videos will be uploaded soon
+      </h4>
     </div>
   );
 };
+
+// export const getServerSideProps: GetServerSideProps = async (context) => {
+//   const YOUTUBE_API_URL = `https://www.googleapis.com/youtube/v3/playlistItems?part=snippet&playlistId=${context.params?.archiveId}&maxResults=20&key=${process.env.YOUTUBE_API_KEY}`;
+
+//   const res = await fetch(YOUTUBE_API_URL);
+//   const data = await res.json();
+
+//   if (!data) {
+//     return {
+//       props: { notFound: true },
+//     };
+//   }
+
+//   return {
+//     props: data,
+//   };
+// };
 
 export default SingleArchive;

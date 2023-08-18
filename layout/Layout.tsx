@@ -4,6 +4,8 @@ import Mobile from "./footer/Mobile";
 
 import classes from "./Layout.module.scss";
 import ScrollUpButton from "../components/shared/ScrollUpBtn";
+import { useEffect } from "react";
+import axios from "axios";
 
 interface IProps {
   children?: React.ReactNode;

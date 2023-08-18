@@ -8,6 +8,7 @@ import Conferences from "../components/home/Conferences";
 import Button from "../components/form/Button";
 
 import { quicksand } from "../fonts";
+import { useEffect } from "react";
 
 import classes from "./home.module.scss";
 

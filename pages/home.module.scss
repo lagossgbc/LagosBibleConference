@@ -41,13 +41,13 @@
   .Logo {
     width: 20rem;
 
-    @media screen and (max-width: 600px) {
-      width: 25rem;
-    }
+    // @media screen and (max-width: 600px) {
+    //   width: 25rem;
+    // }
 
-    @media screen and (max-width: 400px) {
-      width: 18rem;
-    }
+    // @media screen and (max-width: 400px) {
+    //   width: 18rem;
+    // }
   }
   .Text {
     width: 32rem;
@@ -119,11 +119,11 @@
       opacity: 1;
       visibility: visible;
       pointer-events: all;
-      bottom: 5%;
+      bottom: 4rem;
     }
 
     @media screen and (max-width: 600px) {
-      bottom: 3rem;
+      bottom: 7rem;
     }
   }
 }
