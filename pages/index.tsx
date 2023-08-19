@@ -46,15 +46,6 @@ export default function Home() {
             </ul>
           </div>
         </div>
-        <div className={classes.Btn}>
-          <Button
-            text="REGISTER"
-            to="https://lbc2023-register.evenito.site/#rsvp"
-            target="__blank"
-            mode="pry"
-            size="small"
-          />
-        </div>
       </div>
       <Synopsis />
       <Speakers />

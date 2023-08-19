@@ -4,6 +4,11 @@
   padding: 3rem;
   padding-top: 0;
 
+  @media screen and (max-width: 770px) {
+    padding-left: 1rem;
+    padding-right: 1rem;
+  }
+
   h3 {
     font-size: 3.2rem;
     font-weight: 700;
@@ -19,12 +24,22 @@
   .Button {
     margin-top: 3rem;
     margin-bottom: 4rem;
-    text-align: center;
+    // text-align: center;
     letter-spacing: 2px;
+
+    display: flex;
+    gap: 2rem;
+    justify-content: center;
   }
 
   p {
     line-height: 1.5;
     text-align: justify;
+  }
+}
+
+@media screen and (min-width: 771px) {
+  .Register {
+    display: none;
   }
 }

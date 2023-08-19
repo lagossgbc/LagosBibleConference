@@ -23,6 +23,15 @@ const Synopsis = () => {
         his grace; and with the Holy Spirit pre-eminently in his comfort.
       </p>
       <div className={classes.Button}>
+        <div className={classes.Register}>
+          <Button
+            text="REGISTER"
+            to="https://lbc2023-register.evenito.site/#rsvp"
+            target="__blank"
+            mode="pry"
+            size="small"
+          />
+        </div>
         <Button text="LEARN MORE" mode="pry" to="/schedule" size="small" />
       </div>
     </section>
