@@ -1,8 +1,8 @@
 @import "../../styles/variables.scss";
 
 .Loader {
-  border: 0.4rem solid $color-pry-dark;
-  border-top: 0.4rem solid $background-color;
+  border: 0.4rem solid $sec;
+  border-top: 0.4rem solid $pry-2;
   border-radius: 50%;
   width: 3rem;
   height: 3rem;
@@ -11,7 +11,7 @@
 
 .White {
   border: 0.4rem solid white;
-  border-top: 0.4rem solid $background-color-light;
+  border-top: 0.4rem solid $pry-1;
   border-radius: 50%;
   width: 3rem;
   height: 3rem;

@@ -1,17 +1,22 @@
 import Image from "next/image";
 import Transition from "../../components/shared/ui/Transition";
 import classes from "./Give.module.scss";
+import Head from "next/head";
 
 const page = () => {
   return (
     <Transition className={classes.Container}>
+      <Head>
+        <title>LBC | Donate</title>
+      </Head>
       <div className={classes.Img}>
         <Image
           alt="Give"
-          src="https://websiteimages.nyc3.cdn.digitaloceanspaces.com/lbc/give.webp"
+          src="/images/give.webp"
           fill
-          // placeholder="blur"
-          // blurDataURL="/logo.webp"
+          priority
+          placeholder="blur"
+          blurDataURL="/logo.webp"
         />
       </div>
 

@@ -6,6 +6,7 @@ import Image from "next/image";
 
 import classes from "./MobileConf.module.scss";
 import { open_sans } from "../../fonts";
+import Link from "next/link";
 
 const MobileConf: React.FC<{
   data: any;
@@ -62,32 +63,40 @@ const MobileConf: React.FC<{
 
         return (
           <article key={index} className={position}>
-            <div
-              style={{
-                position: "relative",
-                minWidth: "36rem",
-                height: "33.8rem",
-              }}
+            <Link
+              href={
+                item.playlistId
+                  ? "/archive/" + item.playlistId
+                  : "/construction"
+              }
             >
-              <Image src={item.img || ""} alt="What to expect" fill />
               <div
                 style={{
-                  display: "flex",
-                  justifyContent: "center",
+                  position: "relative",
+                  minWidth: "36rem",
+                  height: "33.8rem",
                 }}
               >
-                <h4
-                  className={open_sans.className}
+                <Image src={item.img || ""} alt="What to expect" fill />
+                <div
                   style={{
-                    position: "absolute",
-                    bottom: "-8rem",
-                    fontSize: "1.8rem",
+                    display: "flex",
+                    justifyContent: "center",
                   }}
                 >
-                  LBC {item.year}
-                </h4>
+                  <h4
+                    className={open_sans.className}
+                    style={{
+                      position: "absolute",
+                      bottom: "-8rem",
+                      fontSize: "1.8rem",
+                    }}
+                  >
+                    LBC {item.year}
+                  </h4>
+                </div>
               </div>
-            </div>
+            </Link>
           </article>
         );
       })}

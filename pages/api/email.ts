@@ -29,7 +29,7 @@ const handler = async (req: NextApiRequest, res: NextApiResponse) => {
       if (!reCaptchaRes)
         return res.status(401).json({ message: "Google Recaptcha error" });
 
-      const emailRes = await SendEmail({
+      await SendEmail({
         from: process.env.EMAIL_USER!,
         html: message + `<br /> ${name}'s phone number: ${phone}`,
         subject: "New message from " + name,
@@ -37,9 +37,7 @@ const handler = async (req: NextApiRequest, res: NextApiResponse) => {
         reply_to: email,
       });
 
-      console.log(emailRes);
-
-      res.json({ message: "ok" });
+      res.json("ok");
     } catch (err: any) {
       res.status(500).json({ message: err.message });
     }

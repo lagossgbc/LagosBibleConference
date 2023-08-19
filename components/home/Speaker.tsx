@@ -20,6 +20,8 @@ const Speaker: React.FC<SpeakerType> = ({
         alt={name}
         width={500}
         height={300}
+        priority
+        blurDataURL="/test.webp"
         className={index === 1 || index === 3 ? classes.Adjust : ""}
       />
       <div className={classes.Yellow}></div>

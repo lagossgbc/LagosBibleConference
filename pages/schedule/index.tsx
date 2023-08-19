@@ -5,10 +5,14 @@ import schedule from "../../data/schedule";
 import Button from "../../components/form/Button";
 
 import classes from "./Schedule.module.scss";
+import Head from "next/head";
 
 const SchedulePage = () => {
   return (
     <Transition className={classes.Container}>
+      <Head>
+        <title>LBC | Schedule for 2023</title>
+      </Head>
       <div className={classes.Top}>
         <div className={classes.Hands}>
           <Image src="/images/praying.svg" alt="LBC Logo" fill />

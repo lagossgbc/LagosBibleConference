@@ -5,16 +5,21 @@ import gallery from "../../data/gallery";
 import Transition from "../../components/shared/ui/Transition";
 
 import classes from "./About.module.scss";
+import Head from "next/head";
 
 const About = () => {
   return (
     <Transition className={classes.Container}>
+      <Head>
+        <title>What LBC is About</title>
+      </Head>
       <div className={classes.Banner}>
         <Image
           src="https://websiteimages.nyc3.cdn.digitaloceanspaces.com/lbc/people.webp"
           alt="Banner"
           fill
           sizes="500px"
+          priority
         />
         <h3>about lagos bible conference</h3>
       </div>

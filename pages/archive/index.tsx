@@ -8,10 +8,14 @@ import { poppins } from "../_app";
 import { BiSearch } from "react-icons/bi";
 
 import classes from "./Archive.module.scss";
+import Head from "next/head";
 
 const Archives = () => {
   return (
     <Transition className={classes.Container}>
+      <Head>
+        <title>LBC | Archive</title>
+      </Head>
       <h3>Conference Archive</h3>
       {/* <div className={classes.Input}>
         <BiSearch />

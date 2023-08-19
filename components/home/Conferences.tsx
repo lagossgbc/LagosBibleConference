@@ -6,6 +6,7 @@ import { lastFourConf, lastThreeConf } from "../../data/conferences";
 import { inter } from "../../fonts";
 
 import classes from "./Conferences.module.scss";
+import Link from "next/link";
 
 const Conferences = () => {
   return (
@@ -15,9 +16,17 @@ const Conferences = () => {
       <div className={classes.Conferences}>
         {lastThreeConf.map((item) => (
           <div key={item.year} className={classes.Inner}>
-            <div className={classes.Image}>
-              <Image src={item.img} alt={item.year} fill sizes="300px" />
-            </div>
+            <Link
+              href={
+                item.playlistId
+                  ? "/archive/" + item.playlistId
+                  : "/construction"
+              }
+            >
+              <div className={classes.Image}>
+                <Image src={item.img} alt={item.year} fill sizes="300px" />
+              </div>
+            </Link>
             <h4 className={inter.className}>LBC {item.year}</h4>
           </div>
         ))}

@@ -8,65 +8,74 @@ import { eb_garamond } from "../../fonts";
 import VideoList from "../../components/videos/VideoList";
 
 import classes from "./SingleArchive.module.scss";
+import Head from "next/head";
 
 const SingleArchive: React.FC<any> = (props) => {
-  const archiveId = useRouter().query?.archiveId as string;
-
+  const { replace, query } = useRouter();
+  let videos = [];
+  const archiveId = query?.archiveId as string;
   const currentArchive = findOneConf(archiveId);
-
-  const videos = props.items.map((video: any) => {
-    return {
-      videoId: video.snippet.resourceId.videoId,
-      title: video.snippet.title,
-      thumbnail: video.snippet.thumbnails.medium.url,
-      date: video.snippet.publishedAt,
-    };
-  });
-
   if (!currentArchive) return null;
 
-  return (
-    <div className={classes.Container}>
-      <h3>LAGOS BIBLE CONFERENCE {currentArchive?.year}</h3>
+  if (!props) {
+    replace("/construction");
+    return;
+  } else {
+    videos = props.items.map((video: any) => {
+      return {
+        videoId: video.snippet.resourceId.videoId,
+        title: video.snippet.title,
+        thumbnail: video.snippet.thumbnails.medium.url,
+        date: video.snippet.publishedAt,
+      };
+    });
 
-      <section>
-        <div className={classes.Left}>
-          <div className={classes.Img}>
-            <Image
-              src={currentArchive.img}
-              alt={"LBC-" + currentArchive.year}
-              fill
-            />
-          </div>
-          <ul>
-            {currentArchive.speakers.map((s, i) => (
-              <li key={i}>{s} </li>
-            ))}
-          </ul>
-        </div>
-        <article>
-          <h4 className={eb_garamond.className}>Synopsis</h4>
-          <div>
-            {currentArchive.synopsis.map((item, index) => (
-              <p key={index}>{item}</p>
-            ))}
-            <ul className={classes.Speakers}>
-              <b>Speakers: &nbsp;</b>
-              {currentArchive.speakers.map((speaker, index) => (
-                <li key={index}>
-                  {index !== currentArchive.speakers.length - 1
-                    ? speaker + " |"
-                    : speaker}{" "}
-                </li>
+    return (
+      <div className={classes.Container}>
+        <Head>
+          <title>LBC {currentArchive.year} </title>
+        </Head>
+        <h3>LAGOS BIBLE CONFERENCE {currentArchive?.year}</h3>
+
+        <section>
+          <div className={classes.Left}>
+            <div className={classes.Img}>
+              <Image
+                src={currentArchive.img}
+                alt={"LBC-" + currentArchive.year}
+                fill
+              />
+            </div>
+            <ul>
+              {currentArchive.speakers.map((s, i) => (
+                <li key={i}>{s} </li>
               ))}
             </ul>
           </div>
-        </article>
-      </section>
+          <article>
+            <h4 className={eb_garamond.className}>Synopsis</h4>
+            <div>
+              {currentArchive.synopsis.map((item, index) => (
+                <p key={index}>{item}</p>
+              ))}
+              <ul className={classes.Speakers}>
+                <b>Speakers: &nbsp;</b>
+                {currentArchive.speakers.map((speaker, index) => (
+                  <li key={index}>
+                    {index !== currentArchive.speakers.length - 1
+                      ? speaker + " |"
+                      : speaker}{" "}
+                  </li>
+                ))}
+              </ul>
+            </div>
+          </article>
+        </section>
 
-      <VideoList videos={videos} />
-    </div>
-  );
+        <VideoList videos={videos} />
+      </div>
+    );
+  }
 };
 
 export const getServerSideProps: GetServerSideProps = async (context) => {

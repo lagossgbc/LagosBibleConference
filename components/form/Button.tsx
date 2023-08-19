@@ -49,7 +49,7 @@ const Button: React.FC<ButtonProps> = ({
     <button
       type="button"
       className={classesConsts}
-      onClick={onClick && onClick}
+      onClick={onClick ? onClick : () => {}}
     >
       {text}
     </button>

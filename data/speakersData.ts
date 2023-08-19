@@ -35,7 +35,7 @@ const speakersData = [
     church: "Christ Bible Church,",
     img: "https://websiteimages.nyc3.cdn.digitaloceanspaces.com/lbc/Pastor%20Joe.webp",
     desc: [
-      "Pastor Joseph Jacowitz serves as an elder in Christ Bible Church, Pleasanton, California, USA. He is Married to and God has blessed them with five children. He is the founder and president of First love ministries – a ministry with a mission aimed at providing solid theological teaching through Radio, Publications, Missions and Grace bible university with the intent to conduct ministry without charge and compromise.",
+      "Pastor Joseph Jacowitz serves as an elder in Christ Bible Church, Pleasanton, California, USA. He is married to Sherry and God has blessed them with five children. He is the founder and president of First love ministries – a ministry with a mission aimed at providing solid theological teaching through Radio, Publications, Missions and Grace bible university with the intent to conduct ministry without charge and compromise.",
     ],
   },
 ];

@@ -63,7 +63,12 @@ const MySlider: React.FC<{
 
         return (
           <article key={index} className={position}>
-            <Image src={item.img || ""} alt="What to expect" fill />
+            <Image
+              src={item.img || ""}
+              alt="What to expect"
+              fill
+              sizes="400px"
+            />
             <div className={classes.Info}>
               <h4 className={eb_garamond.className}>{item.title}</h4>
               <p className={quicksand.className}>{item.details}</p>

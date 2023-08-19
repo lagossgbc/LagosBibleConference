@@ -25,6 +25,9 @@ export default function Home() {
           <h4 className={quicksand.className + " " + classes.Date}>
             2nd - 4th November, 2023
           </h4>
+          <div className={classes.Address}>
+            <b>Venue: </b>Shepherdhill Baptist Church, Obanikoro, Lagos
+          </div>
           <div className={classes.Speakers}>
             <h4>Main Speakers</h4>
             <ul>

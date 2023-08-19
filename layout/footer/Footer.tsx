@@ -10,7 +10,13 @@ const Footer = () => {
     <footer className={classes.Container}>
       <div className={classes.Top}>
         <div className={classes.Img}>
-          <Image src="/logo.webp" alt="LBC Logo" width={200} height={160} />{" "}
+          <Image
+            src="/logo.webp"
+            alt="LBC Logo"
+            width={200}
+            height={160}
+            priority
+          />{" "}
         </div>
         <div>
           <h4 className={alfa_slab_one.className}>Lagos Bible</h4>

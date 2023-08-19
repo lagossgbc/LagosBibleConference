@@ -4,11 +4,15 @@ export type InputProps = {
   name: string;
   required?: boolean;
   autoComplete?: string;
-  onInput: any;
+  onChange: any;
   className?: string;
   label?: string;
   errorText?: string;
   placeholder?: string;
+  value: string;
+  disabled?: boolean;
+  border?: boolean;
+  pattern?: string;
 };
 
 export type ButtonProps = {

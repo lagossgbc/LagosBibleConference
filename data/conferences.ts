@@ -193,11 +193,11 @@ const conferences = [
 ];
 
 export const lastThreeConf = conferences.slice(0, 3).map((item) => {
-  return { img: item.img, year: item.year };
+  return { img: item.img, year: item.year, playlistId: item.playlistId };
 });
 
 export const lastFourConf = conferences.slice(0, 4).map((item) => {
-  return { img: item.img, year: item.year };
+  return { img: item.img, year: item.year, playlistId: item.playlistId };
 });
 
 export const findOneConf = (playlistId: string) =>

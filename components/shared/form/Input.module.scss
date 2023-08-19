@@ -1,36 +1,102 @@
 @import "../../../styles/variables.scss";
 
 .Container {
-  display: flex;
-  flex-direction: column;
-  padding-bottom: 1rem;
-  width: 100%;
+  margin-bottom: 2rem;
+  position: relative;
 
-  label,
-  small {
-    padding: 0.5rem;
-  }
+  label {
+    font-weight: 600;
+    display: inline-block;
+    margin-bottom: 0.5rem;
 
-  input,
-  textarea {
-    max-width: 100%;
-    border-radius: 0.5rem;
-    // line-height: 3rem;
-    font-size: 2rem;
-    padding: 0.5rem;
-    outline: none;
-    border: none;
-    border: 2px solid $black;
-    background-color: white;
-    color: $sec;
-    font-family: "Poppins", "sans serif";
+    &::after {
+      content: "*";
+      color: $danger;
+    }
   }
 
   input {
     height: 5rem;
   }
 
+  input,
+  textarea {
+    outline: 2px solid transparent;
+    width: 100%;
+    border-radius: 1rem;
+    border: none;
+    padding-left: 1rem;
+    padding-right: 1rem;
+    transition: all 500ms;
+
+    &:disabled {
+      background-color: lightgray;
+      cursor: not-allowed;
+      color: $sec;
+    }
+
+    &:invalid[data-focused="true"] {
+      outline: 2px solid $danger;
+      color: $danger;
+    }
+
+    &:invalid[data-focused="true"] ~ .ErrorText {
+      display: block;
+    }
+
+    &:invalid[data-focused="true"] ~ label {
+      color: $danger;
+    }
+
+    &.border {
+      outline: 2px solid #aaaaaa;
+
+      &:focus {
+        outline: 2px solid transparent;
+        box-shadow: 0 0 15px $sec;
+      }
+    }
+
+    &:focus {
+      box-shadow: 0 0 10px $sec;
+    }
+  }
+
   textarea {
     resize: none;
+    font-family: "Poppins", "sans serif";
+    font-size: 1.6rem;
+    padding-top: 1rem;
+    // margin-bottom: -1rem;
+  }
+}
+
+.ErrorText {
+  color: $danger;
+  width: max-content;
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  position: absolute;
+  background: white;
+  z-index: 1;
+  bottom: -1rem;
+  padding: 0 0.5rem;
+  border: 1px solid $danger;
+  border-radius: 0.3rem;
+  font-size: 70%;
+  margin-left: 3rem;
+  transition: 300ms ease;
+  animation: SlideDown 300ms;
+  display: none;
+  max-width: 100%;
+}
+
+@keyframes SlideDown {
+  from {
+    transform: translateY(-1rem);
+  }
+  to {
+    transform: translateX(0);
   }
 }
