@@ -13,7 +13,7 @@ const Archives = () => {
   return (
     <Transition className={classes.Container}>
       <h3>Conference Archive</h3>
-      <div className={classes.Input}>
+      {/* <div className={classes.Input}>
         <BiSearch />
         <Input
           name="search"
@@ -22,10 +22,15 @@ const Archives = () => {
           autoComplete="on"
           className={poppins.className}
         />
-      </div>
+      </div> */}
       <div className={classes.Archives}>
         {conferences.map((item) => (
-          <Link key={item.year} href={"/archive/" + item.playlistId}>
+          <Link
+            key={item.year}
+            href={
+              item.playlistId ? "/archive/" + item.playlistId : "/construction"
+            }
+          >
             <div className={classes.Image}>
               <Image src={item.img} alt={item.year} fill sizes="250px" />
             </div>

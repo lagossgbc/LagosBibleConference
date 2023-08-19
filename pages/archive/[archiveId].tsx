@@ -40,7 +40,7 @@ const SingleArchive: React.FC<any> = (props) => {
           </div>
           <ul>
             {currentArchive.speakers.map((s, i) => (
-              <li key={i}>{s + " "} </li>
+              <li key={i}>{s} </li>
             ))}
           </ul>
         </div>

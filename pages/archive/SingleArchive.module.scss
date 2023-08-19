@@ -70,6 +70,18 @@
     li {
       line-height: 1.2;
       font-size: 1.4rem;
+
+      &::after {
+        content: " | ";
+        width: max-content;
+        display: inline-block;
+      }
+
+      &:last-of-type {
+        &::after {
+          display: none;
+        }
+      }
     }
   }
 

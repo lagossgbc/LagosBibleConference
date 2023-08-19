@@ -1,16 +1,17 @@
 import Nodemailer from "nodemailer";
-import axios from "axios";
 
 const SendEmail = async ({
   from,
   to,
   subject,
   html,
+  reply_to,
 }: {
   from: string;
   to: string;
   subject: string;
   html: string;
+  reply_to: string;
 }) => {
   // you can add reply_to as the fifth arg
   const transporter = Nodemailer.createTransport({
@@ -33,6 +34,7 @@ const SendEmail = async ({
     to,
     subject,
     html,
+    reply_to,
   };
 
   const data = await transporter.sendMail(mailOptions);
@@ -40,17 +42,3 @@ const SendEmail = async ({
 };
 
 export default SendEmail;
-
-export const VerifyEmail = async (email: string) => {
-  const options = {
-    method: "GET",
-    url: "https://email-checker.p.rapidapi.com/verify/v1",
-    params: { email },
-    headers: {
-      "X-RapidAPI-Key": process.env.RAPID_API_KEY,
-      "X-RapidAPI-Host": "email-checker.p.rapidapi.com",
-    },
-  };
-
-  return await axios.request(options);
-};
