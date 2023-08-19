@@ -29,7 +29,7 @@ export default function Home() {
             <h4>Main Speakers</h4>
             <ul>
               <li>
-                <b>Roland Kalifungwa</b> - Lusaka Baptist Church, Zambia |
+                <b>Ronald Kalifungwa</b> - Lusaka Baptist Church, Zambia |
               </li>
               <li>
                 <b> Murungi Igweta</b> - Trinity Baptist Church, Kenya

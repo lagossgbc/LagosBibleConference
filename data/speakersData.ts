@@ -1,8 +1,8 @@
 const speakersData = [
   {
-    name: "Roland Kalifungwa",
+    name: "Ronald Kalifungwa",
     location: "Lusaka, Zambia",
-    church: "Kabwata Baptist Church, ",
+    church: "Lusaka Baptist Church, ",
     img: "https://websiteimages.nyc3.cdn.digitaloceanspaces.com/lbc/KALIFUNGWA.webp",
     desc: [
       "Pastor Ronald Kalifungwa is the full-time pastor and part of the eldership at Lusaka Baptist Church. Ronald was brought up a Roman Catholic and believed for a long time that he was a Christian, until in 1981 he was convicted of his sinful state under the preaching of God’s word at Lusaka Baptist Church, and was born again.",
