@@ -6,6 +6,7 @@ import { Poppins } from "@next/font/google";
 import type { AppProps } from "next/app";
 import Layout from "../layout/Layout";
 import RouteLoading from "../components/loaders/RouteLoading";
+import GTMLayout from "../components/shared/GTM";
 
 export const poppins = Poppins({
   weight: ["300", "600", "700"],
@@ -27,6 +28,7 @@ export default function App({ Component, pageProps }: AppProps) {
         />
         <link rel="icon" href="/logo.webp" />
       </Head>
+      <GTMLayout />
       <RouteLoading />
       <Layout className={poppins.className}>
         <Component {...pageProps} />
