@@ -6,6 +6,7 @@ import ScrollUpButton from "../components/shared/ScrollUpBtn";
 import CaptchaContainer from "../components/shared/CaptchaContainer";
 
 import classes from "./Layout.module.scss";
+import GTMLayout from "../components/shared/GTM";
 
 interface IProps {
   children?: React.ReactNode;
@@ -15,6 +16,7 @@ interface IProps {
 const Layout: React.FC<IProps> = ({ children, className }) => {
   return (
     <div className={classes.Container + " " + className}>
+      <GTMLayout />
       <Navigation />
       <CaptchaContainer>
         <main>{children}</main>
