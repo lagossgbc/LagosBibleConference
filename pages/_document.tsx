@@ -6,14 +6,14 @@ class MyDocument extends Document {
       <Html lang="en">
         <Head />
         <body>
-          <noscript>
+          {/* <noscript>
             <iframe
               src="https://www.googletagmanager.com/ns.html?id=GTM-NJV6HW4K"
               height="0"
               width="0"
               style={{ display: "none", visibility: "hidden" }}
             ></iframe>
-          </noscript>
+          </noscript> */}
           <Main />
           <NextScript />
           <div id="Modal"></div>
