@@ -8,14 +8,12 @@ import CountDown from "../shared/ui/CountDown";
 import { eb_garamond, quicksand } from "../../fonts";
 
 import classes from "./Mid.module.scss";
+import Video from "./Video";
 
 const Mid = () => {
   return (
     <section className={classes.Container}>
-      {/* Add padding bottom to speakers */}
-      {/* <div className={classes.YoutubeVideo}>
-        <div className={classes.Inner}></div>
-      </div> */}
+      <Video />
       {new Date() < new Date("Nov 2 2023") && (
         <CountDown date={new Date("Nov 2 2023")} />
       )}

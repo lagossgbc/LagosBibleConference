@@ -1,0 +1,96 @@
+@import "../../styles/variables.scss";
+
+.Container {
+  width: 100%;
+  //   padding: 5rem 2rem;
+  margin: 5rem 2rem;
+  //   padding-bottom: 4rem;
+  //   position: relative;
+  margin: auto;
+  max-width: 80rem;
+  //   max-height: 45rem;
+  border: 3px solid red;
+
+  @media screen and (max-width: 600px) {
+    padding: 0;
+    margin-bottom: -1rem;
+  }
+
+  video {
+    max-height: 40rem;
+    width: 100%;
+    box-shadow: 0 0 10px rgba(black, 0.5);
+    border-radius: 1rem;
+
+    &.ShowVideo {
+      display: block;
+    }
+    &.HideVideo {
+      display: none;
+    }
+
+    @media screen and (max-width: 600px) {
+      border-radius: 0;
+    }
+  }
+
+  //   img {
+  //     position: absolute;
+  //     //   width: 100%;
+  //     //   height: 50rem;
+  //     //   object-fit: contain;
+
+  //     top: 0;
+  //     left: 0;
+  //     width: 100%;
+  //     height: 100%;
+  //     object-fit: cover; /* Adjust as needed */
+  //     z-index: 1;
+  //   }
+
+  .Figure {
+    position: relative;
+    margin: auto;
+    max-width: 80rem;
+    width: 100%;
+    height: 40rem;
+    padding: 5rem 2rem;
+
+    &.ShowImage {
+      display: block;
+    }
+    &.HideImage {
+      display: none;
+    }
+
+    @media screen and (max-width: 600px) {
+      padding: 0;
+      height: 30rem;
+    }
+
+    img {
+      width: 100%;
+      cursor: pointer;
+      object-fit: contain;
+      margin-bottom: 5rem;
+
+      @media screen and (max-width: 600px) {
+        object-fit: fill;
+      }
+    }
+  }
+
+  //   .Inner {
+  //     margin: auto;
+  //     max-width: 80rem;
+  //   }
+  //   video {
+  //     box-shadow: 0 0 10px rgba(black, 0.5);
+  //     border-radius: 1rem;
+  //     width: 100%;
+
+  //     @media screen and (max-width: 600px) {
+  //       border-radius: 0;
+  //     }
+  //   }
+}

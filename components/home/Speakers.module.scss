@@ -2,12 +2,12 @@
 
 .Container {
   // padding-bottom: 10rem;  // put back in
-  margin-bottom: -2px; // remove
+  // margin-bottom: -2px; // remove
 
   @media screen and (max-width: 600px) {
     gap: 1rem;
     padding: 0;
-    padding-bottom: 3rem;
+    // padding-bottom: 3rem;
   }
 
   h3 {
