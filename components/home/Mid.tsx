@@ -13,7 +13,7 @@ import Video from "./Video";
 const Mid = () => {
   return (
     <section className={classes.Container}>
-      <Video />
+      {/* <Video /> */}
       {new Date() < new Date("Nov 2 2023") && (
         <CountDown date={new Date("Nov 2 2023")} />
       )}
