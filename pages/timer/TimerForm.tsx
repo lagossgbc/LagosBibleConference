@@ -21,9 +21,7 @@ const TimerForm: React.FC<IProps> = ({
 }) => {
   const handleTimeChange = (e: React.ChangeEvent<HTMLInputElement>) => {
     const inputValue = parseInt(e.target.value, 10) || 0;
-    console.log(inputValue);
-
-    setTimeInMinutes(isNaN(inputValue) ? 0 : inputValue);
+    setTimeInMinutes(inputValue);
   };
 
   return (

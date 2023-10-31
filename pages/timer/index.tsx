@@ -57,7 +57,6 @@ const CountDown = () => {
           <div className={classes.Box}>
             <h6 className={quicksand.className}>
               {minutes?.toString().padStart(2, "0")}
-              {/* {minutes.toString().padStart(2, "0")} */}
             </h6>
             <p>Minutes</p>
           </div>
