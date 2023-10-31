@@ -25,8 +25,11 @@ const Footer = () => {
       </div>
       <div className={classes.Bottom}>
         <p className={classes.Base}>
-          Sovereign Grace Bible Church © {new Date().getFullYear()}. All Rights
-          Reserved.
+          Sovereign Grace{" "}
+          <a href="/timer" target="_blank" style={{ cursor: "text" }}>
+            Bible
+          </a>{" "}
+          Church © {new Date().getFullYear()}. All Rights Reserved.
         </p>
 
         <div className={classes.Group1}>
