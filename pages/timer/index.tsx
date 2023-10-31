@@ -30,8 +30,6 @@ const CountDown = () => {
   const minutes = Math.floor(TimeInMinutes / 60);
   const seconds = TimeInMinutes % 60;
 
-  console.log(minutes);
-
   return (
     <div className={`${classes.Outside} ${minutes < 5 ? classes.RoundUp : ""}`}>
       <MaximizeBtn
