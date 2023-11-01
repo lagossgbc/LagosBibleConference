@@ -1,13 +1,14 @@
 import { useEffect, useState } from "react";
 import { quicksand } from "../../fonts";
 
-import MaximizeBtn from "./MaximizeBtn";
+import Controls from "./Controls";
 import TimerForm from "./TimerForm";
 
 import classes from "./Timer.module.scss";
 
 const CountDown = () => {
   const [TimerStarted, setTimerStarted] = useState(false);
+  const [Reset, setReset] = useState(true);
   const [Description, setDescription] = useState("");
   const [TimeInMinutes, setTimeInMinutes] = useState(0);
   const [isMaximized, setIsMaximized] = useState(false);
@@ -27,16 +28,34 @@ const CountDown = () => {
     return () => clearInterval(timer);
   }, [TimerStarted]);
 
+  const startTimer = () => {
+    if (minutes == 0 && seconds == 0) return;
+    setReset(false);
+    setTimerStarted((prev) => !prev);
+  };
+
+  const reset = () => {
+    setTimeInMinutes(0);
+    setReset(true);
+    setTimerStarted(false);
+  };
+
   const minutes = Math.floor(TimeInMinutes / 60);
   const seconds = TimeInMinutes % 60;
+  const TimeUp = minutes == 0 && seconds == 0 && !Reset;
 
   return (
-    <div className={`${classes.Outside} ${minutes < 5 ? classes.RoundUp : ""}`}>
-      <MaximizeBtn
+    <div
+      className={`${classes.Outside} ${
+        minutes < 5 && !Reset ? classes.RoundUp : ""
+      }`}
+    >
+      <Controls
         isMaximized={isMaximized}
         setIsMaximized={setIsMaximized}
-        setTimerStarted={setTimerStarted}
+        setTimerStarted={startTimer}
         TimerStarted={TimerStarted}
+        reset={reset}
       />
       <TimerForm
         TimeInMinutes={TimeInMinutes}
@@ -47,8 +66,10 @@ const CountDown = () => {
         setTimerStarted={setTimerStarted}
         style={isMaximized || TimerStarted ? { display: "none" } : {}}
       />
-      <h3 className={classes.Lead}>
-        {minutes < 5
+      <h3 className={`${classes.Lead} ${TimeUp ? classes.TimeUp : ""}`}>
+        {TimeUp
+          ? "Time Up!!!"
+          : minutes < 5 && !Reset
           ? "You have less than 5 minutes, Please round up."
           : Description}
       </h3>

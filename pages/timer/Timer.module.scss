@@ -16,11 +16,8 @@
   }
 
   svg {
-    position: absolute;
-    right: 0rem;
-    top: 1rem;
+    color: whitesmoke;
     font-size: 4rem;
-    color: white;
   }
 }
 
@@ -103,4 +100,20 @@
   color: white;
   font-size: 4rem;
   padding: 0 2rem;
+
+  &.TimeUp {
+    animation: pulse infinite 1000ms;
+  }
+}
+
+@keyframes pulse {
+  0% {
+    font-size: 5rem;
+  }
+  50% {
+    font-size: 7rem;
+  }
+  100% {
+    font-size: 5rem;
+  }
 }

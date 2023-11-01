@@ -1,18 +1,21 @@
 import { useEffect } from "react";
 import { FiMaximize, FiMinimize } from "react-icons/fi";
-import Button from "../../components/form/Button";
+import { BsFillPlayFill, BsPauseCircle } from "react-icons/bs";
+import { BiReset } from "react-icons/bi";
 
 interface IProps {
   isMaximized: any;
   setIsMaximized: React.Dispatch<React.SetStateAction<boolean>>;
   TimerStarted: boolean;
   setTimerStarted: React.Dispatch<React.SetStateAction<boolean>>;
+  reset: any;
 }
-const MaximizeBtn: React.FC<IProps> = ({
+const Controls: React.FC<IProps> = ({
   isMaximized,
   setIsMaximized,
   TimerStarted,
   setTimerStarted,
+  reset,
 }) => {
   const toggleMaximize = () => {
     if (!isMaximized) {
@@ -65,24 +68,36 @@ const MaximizeBtn: React.FC<IProps> = ({
     <div
       style={{
         position: "absolute",
-        right: "3rem",
+        left: "1rem",
+        bottom: "1rem",
         display: "flex",
-        width: "15rem",
+        flexDirection: "column",
+        width: "30rem",
         justifyContent: "center",
-        alignItems: "center",
-        gap: "5rem",
+        alignItems: "right",
+        gap: "2rem",
+        zIndex: 2000,
       }}
     >
-      <Button
-        size="small"
-        text={TimerStarted ? "Pause" : "Start"}
-        onClick={() => setTimerStarted((prev) => !prev)}
-      />
       <div onClick={toggleMaximize}>
-        {isMaximized ? <FiMinimize /> : <FiMaximize />}
+        {isMaximized ? (
+          <FiMinimize title="Minimize" />
+        ) : (
+          <FiMaximize title="Maximize" />
+        )}
+      </div>
+      <div onClick={() => setTimerStarted((prev) => !prev)}>
+        {TimerStarted ? (
+          <BsPauseCircle title="Pause" />
+        ) : (
+          <BsFillPlayFill title="Start" />
+        )}
+      </div>
+      <div onClick={reset}>
+        <BiReset title="Reset" />
       </div>
     </div>
   );
 };
 
-export default MaximizeBtn;
+export default Controls;

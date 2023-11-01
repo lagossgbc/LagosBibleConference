@@ -4,6 +4,7 @@ import Image from "next/image";
 import Social from "./Social";
 
 import classes from "./Footer.module.scss";
+import Link from "next/link";
 
 const Footer = () => {
   return (
@@ -25,8 +26,11 @@ const Footer = () => {
       </div>
       <div className={classes.Bottom}>
         <p className={classes.Base}>
-          Sovereign Grace Bible Church © {new Date().getFullYear()}. All Rights
-          Reserved.
+          Sovereign Grace{" "}
+          <Link href="/timer" target="_blank">
+            Bible
+          </Link>{" "}
+          Church © {new Date().getFullYear()}. All Rights Reserved.
         </p>
 
         <div className={classes.Group1}>
