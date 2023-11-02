@@ -1,5 +1,26 @@
 const conferences = [
   {
+    // playlistId: "PLkovNX0X4LW1t7exwi93k6rP2KGBNSkBc",
+    year: "2023",
+    img: "https://websiteimages.nyc3.cdn.digitaloceanspaces.com/lbc/mobile-communion.webp",
+    speakers: [
+      "Ronald Kalifungwa",
+      "Murungi Igweta",
+      "Joe Jacowitz",
+      "Austin Huggins",
+      "Sarah Kalifungwa",
+    ],
+    synopsis: [
+      "The subtitle of John Bunyan’s classic work (The Pilgrims Progress) is: “from this world to that which is to come.” This phrase describes the Christian as belonging to two ‘worlds’ and journeying from one to the other.This is the ethos of the passage in the book of Hebrews regarding the Old Testament saints:",
+      "These all died in faith, not having received the promises, but having seen them afar off, and were persuaded of them, and embraced them, and confessed that they were strangers and pilgrims on the earth. For they that say such things declare plainly that they seek a country.",
+      "And truly, if they had been mindful of that country from whence they came out, they might have had opportunity to have returned. But now they desire a better country, that is, an heavenly: wherefore God is not ashamed to be called their God: for he hath prepared for them a city. (Hebrews 11:13-16)",
+      "As the Christian makes this transition from this world to the next, a tension often arises. To what extent should he/she be involved in the day-to-day affairs of this world e.g., education, vocation, politics etc.? Is he to be wholly involved or should he be indifferent about these areas?",
+      "One writer in addressing this subject, notes: “As twenty-first-century Christians, we must relate to the world, but the question is, how do we relate to it? Some Christians are scared, others are simply bewildered, and still others capitulate to the spirit of the age.”",
+      "It is therefore our intention to address the theme of STRANGERS & PILGRIM: Separated & Engaged at the 2022 LAGOS BIBLE CONFERENCE.",
+      "With the current political climate in our nation, amongst other ‘legitimate and illegitimate distractions,’ we are convinced of the need to draw the attention of Christians to their identities as strangers and pilgrims in order to cultivate what one has called, “the spirit of holy separation alongside holy engagement as they serve Christ in all their interactions.",
+    ],
+  },
+  {
     playlistId: "PLkovNX0X4LW1t7exwi93k6rP2KGBNSkBc",
     year: "2022",
     img: "https://websiteimages.nyc3.cdn.digitaloceanspaces.com/lbc/2022.webp",
