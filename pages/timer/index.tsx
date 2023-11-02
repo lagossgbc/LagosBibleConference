@@ -47,7 +47,7 @@ const CountDown = () => {
   return (
     <div
       className={`${classes.Outside} ${
-        minutes < 5 && !Reset ? classes.RoundUp : ""
+        minutes < 10 && !Reset ? classes.RoundUp : ""
       }`}
     >
       <Controls
@@ -69,8 +69,8 @@ const CountDown = () => {
       <h3 className={`${classes.Lead} ${TimeUp ? classes.TimeUp : ""}`}>
         {TimeUp
           ? "Time Up!!!"
-          : minutes < 5 && !Reset
-          ? "You have less than 5 minutes, Please round up."
+          : minutes < 10 && !Reset
+          ? "You have less than 10 minutes, Please round up."
           : Description}
       </h3>
       <article className={classes.Container}>
