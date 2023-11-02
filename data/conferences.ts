@@ -11,13 +11,9 @@ const conferences = [
       "Sarah Kalifungwa",
     ],
     synopsis: [
-      "The subtitle of John Bunyan’s classic work (The Pilgrims Progress) is: “from this world to that which is to come.” This phrase describes the Christian as belonging to two ‘worlds’ and journeying from one to the other.This is the ethos of the passage in the book of Hebrews regarding the Old Testament saints:",
-      "These all died in faith, not having received the promises, but having seen them afar off, and were persuaded of them, and embraced them, and confessed that they were strangers and pilgrims on the earth. For they that say such things declare plainly that they seek a country.",
-      "And truly, if they had been mindful of that country from whence they came out, they might have had opportunity to have returned. But now they desire a better country, that is, an heavenly: wherefore God is not ashamed to be called their God: for he hath prepared for them a city. (Hebrews 11:13-16)",
-      "As the Christian makes this transition from this world to the next, a tension often arises. To what extent should he/she be involved in the day-to-day affairs of this world e.g., education, vocation, politics etc.? Is he to be wholly involved or should he be indifferent about these areas?",
-      "One writer in addressing this subject, notes: “As twenty-first-century Christians, we must relate to the world, but the question is, how do we relate to it? Some Christians are scared, others are simply bewildered, and still others capitulate to the spirit of the age.”",
-      "It is therefore our intention to address the theme of STRANGERS & PILGRIM: Separated & Engaged at the 2022 LAGOS BIBLE CONFERENCE.",
-      "With the current political climate in our nation, amongst other ‘legitimate and illegitimate distractions,’ we are convinced of the need to draw the attention of Christians to their identities as strangers and pilgrims in order to cultivate what one has called, “the spirit of holy separation alongside holy engagement as they serve Christ in all their interactions.",
+      "In the words of the Shorter Catechism, “man’s chief end is to glorify God and to enjoy Him forever.” This statement directs the thoughts of man away from himself and focuses it entirely upon God who made him, sustains him and redeemed him.",
+      "Sadly, many in the church who profess to be Christians live for themselves and not God who ‘saved’ them. In an age of rampant man-centeredness in worship and life, we feel the need to remind the church of the goal of her existence via the theme: Communion with God.",
+      "The aim of the conference will be to re-introduce the doctrine of communion with God, and to explore the rich communion that every believer has with God. We pray and hope for a revival of true heart (lively) religion and a decline of what J.C. Ryle terms formalism. Our hope is that the conference will inspire in all who gather a desire to further cultivate the communion which believers are given to enjoy with the Father, pre-eminently in his love; with the Son, pre-eminently in his grace; and with the Holy Spirit pre-eminently in his comfort.",
     ],
   },
   {
